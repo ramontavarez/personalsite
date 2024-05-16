@@ -13,7 +13,7 @@ const Game = ({ cards }: { cards: CardDataInterface[] }) => {
     useEffect(() => {
         if (matchControl.length === 2) {
             if (matchControl[0].card.value === matchControl[1].card.value) {
-                setMatches(prev => [...prev, matchControl[0].card.value]);
+                setMatches(prev => [...prev, matchControl[0].card.label]);
                 setMatchControl([]);
             } else {
                 setTimeout(() => {

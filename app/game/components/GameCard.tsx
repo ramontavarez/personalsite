@@ -13,8 +13,8 @@ const GameCard = ({ card, matchControl, setMatchControl }: GameCardProps) => {
     const [frontCardClass, setFrontCardClass] = useState<string>("hidden");
     const [backCardClass, setBackCardClass] = useState<string>("");
 
-    const frontCardDefaultClass = "absolute w-32 h-36 border-4 border-gray-700 rounded-sm bg-gray-200 transition-all duration-[250] [transform:rotateY(180deg)]";
-    const backCardDefaultClass = "absolute w-32 h-36 border-4 border-gray-700 rounded-sm bg-gray-500 transition-all duration-[250]";
+    const frontCardDefaultClass = "absolute w-full h-full border-4 border-gray-700 rounded-sm bg-gray-200 transition-all duration-[250] [transform:rotateY(180deg)]";
+    const backCardDefaultClass = "absolute w-full h-full border-4 border-gray-700 rounded-sm bg-gray-500 transition-all duration-[250]";
 
     useEffect(() => {
         setBackCardClass("hidden");
@@ -37,8 +37,8 @@ const GameCard = ({ card, matchControl, setMatchControl }: GameCardProps) => {
     }
 
     return (
-        <div className={`w-32 h-36 `} onClick={() => handleCardClick()}>
-            <div className={`relative w-32 h-36 transition-all duration-500 shadow-md ${flipped ? '[transform:rotateY(180deg)]' : ''}`}>
+        <div className={`w-32 h-36`} onClick={() => handleCardClick()}>
+            <div className={`relative w-full h-full transition-all duration-500 shadow-md ${flipped ? '[transform:rotateY(180deg)]' : ''}`}>
                 <div className={`${backCardDefaultClass} ${backCardClass}`}>
                 </div>
                 <div className={`${frontCardDefaultClass} ${frontCardClass}`}>
