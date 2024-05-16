@@ -7,8 +7,8 @@ export default function Home() {
   const cards = shuffle([...cardsData, ...cardsData])
   return (
     <main>
-      <div className="flex container mx-auto p-24 text-gray-800 max-w-screen-lg">
-        <aside className="flex flex-col gap-4 items-center min-w-40 mr-16">
+      <div className="flex flex-col lg:flex-row container mx-auto p-4 lg:p-24 text-gray-800 max-w-screen-lg gap-8 lg:gap-0">
+        <aside className="flex flex-col gap-4 items-center lg:min-w-40 lg:mr-16">
           <Avatar className="w-32 h-32">
             <AvatarImage src="https://avatars.githubusercontent.com/u/10215019?v=4" className="h-32 w-32" />
           </Avatar>
